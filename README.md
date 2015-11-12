@@ -1,4 +1,4 @@
-### Studipuls
+### Qala based on Studipuls
 
 # Changes
 ...
