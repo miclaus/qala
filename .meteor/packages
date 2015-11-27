@@ -19,7 +19,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 kadira:flow-router
 okgrow:analytics
 coffeescript
-accounts-ui
 accounts-password
 accounts-facebook
 fezvrasta:bootstrap-material-design
@@ -33,3 +32,4 @@ meteortoys:allthings
 kadira:blaze-layout
 twbs:bootstrap
 fortawesome:fontawesome
+accounts-ui-unstyled

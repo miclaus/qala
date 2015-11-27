@@ -1,3 +1,26 @@
 <template name="signup">
-	Sign Up
+	<div class="breadcrumb">
+		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> 
+		<span class="breadcrumb__text">Create Account</span>  
+<!-- 		<span class="glyphicon glyphicon-option-vertical pull-right" aria-hidden="true"></span> -->
+	</div>
+	<div class="container">
+		<p>Please enter username, email address and a password to create an account.</p>
+		<form>
+			<div class="input-group">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				<input type="text" placeholder="Username" name="username">
+				
+			</div>
+			<div class="input-group">
+				<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				<input type="email" placeholder="E-Mail" name="email">
+			</div>
+			<div class="input-group">
+				<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+				<input type="password" placeholder="Password" name="username">
+			</div>
+		</form>
+		<button type="submit" name="login" class="login">Login</button>
+	</div>
 </template>
