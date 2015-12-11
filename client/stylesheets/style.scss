@@ -1,6 +1,84 @@
+/*
+===============================
+			PARTIALS
+===============================
+*/
+
+@import 'normalize';
+
+
+/*
+===============================
+			COLORS
+===============================
+*/
+
+$blue: #1DBCD4;
+$lightgrey: #B3B3B3;
+$darkgrey: #555555;
+$white: white;
+$pink: #FF4081;
+
+/*
+===============================
+			GENERAL
+===============================
+*/
+
+
 * {
 	box-sizing: border-box;
 }
+
+.breadcrumb {
+	background: $blue;
+	color: white;
+	border-radius: 0;
+	font-size: 16px;
+	font-size: 1.6rem;
+	padding: 10px 15px;
+	margin-bottom: 0;
+	&__text {
+		margin-left: 20px;
+	}
+	.glyphicon {
+		cursor: pointer;
+	}
+	a {
+		color: white;
+	}
+}
+
+
+/*
+===============================
+			WELCOME
+===============================
+*/
+
+/*
+===============================
+			LOGIN
+===============================
+*/
+
+
+/*
+===============================
+			SIGNUP
+===============================
+*/
+
+/*
+===============================
+			FORGOTT
+===============================
+*/
+
+
+
+
+
 html, body {
 	height: 100%;
 }
@@ -9,21 +87,7 @@ html, body {
 	display: flex;
 	flex-flow: column;
 }
-.breadcrumb {
-	background: #1DBCD4;
-	color: white;
-	border-radius: 0;
-	font-size: 16px;
-	font-size: 1.6rem;
-	padding: 10px 15px;
-	margin-bottom: 0;
-}
-.breadcrumb__text {
-	margin-left: 20px;
-}
-.breadcrumb .glyphicon {
-	cursor: pointer;
-}
+
 .input-group{
 	position: relative;
 	margin-bottom: 20px;
