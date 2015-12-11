@@ -21,7 +21,6 @@ okgrow:analytics
 coffeescript
 accounts-password
 accounts-facebook
-fezvrasta:bootstrap-material-design
 tomi:upload-jquery
 tomi:upload-server
 chriswessels:hammer
@@ -30,6 +29,5 @@ ccorcos:clientside-image-manipulation
 check
 meteortoys:allthings
 kadira:blaze-layout
-twbs:bootstrap
 fortawesome:fontawesome
 accounts-ui-unstyled
