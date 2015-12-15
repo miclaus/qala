@@ -387,6 +387,7 @@ html, body, #__blaze-root {
   background: #1DBCD4;
   color: white;
   border-radius: 0;
+  position: relative;
   font-size: 18px;
   font-size: 1.8rem;
   padding: 15px 15px;
@@ -395,9 +396,22 @@ html, body, #__blaze-root {
     margin-left: 20px; }
   .breadcrumb a {
     color: white; }
+  .breadcrumb .fa {
+    font-size: 20px;
+    font-size: 2rem; }
+  .breadcrumb img {
+    width: 10%;
+    top: 12px;
+    left: 15px;
+    position: absolute; }
+    .breadcrumb img ~ span {
+      margin-left: 50px; }
 
 p {
   margin: 0; }
+
+.fa.pull-right {
+  margin-left: 1em; }
 
 /*
 ===============================
@@ -479,6 +493,9 @@ p {
   justify-content: center; }
   .container.welcome .container__background img {
     width: 100%; }
+
+.pictures {
+  background: #E0E0E0; }
 
 .forgot hr {
   margin-bottom: 20px; }

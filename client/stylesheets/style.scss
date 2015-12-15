@@ -18,6 +18,7 @@ $lightgrey: #B3B3B3;
 $darkgrey: #555555;
 $white: white;
 $pink: #FF4081;
+$bg-grey: #E0E0E0;
 
 /*
 ===============================
@@ -52,6 +53,7 @@ html, body, #__blaze-root {
 	background: $blue;
 	color: white;
 	border-radius: 0;
+	position: relative;
 
   	@include rem2pix(1.8);
 
@@ -64,10 +66,27 @@ html, body, #__blaze-root {
 	a {
 		color: white;
 	}
+	
+	.fa {
+		@include rem2pix(2);
+	}
+	img {
+		width: 10%;
+		top: 12px;
+		left: 15px;
+		position: absolute;
+		&~span {
+			margin-left: 50px;
+		}
+	}
 }
 
 p {
 	margin: 0;
+}
+
+.fa.pull-right {
+	margin-left: 1em;
 }
 
 
@@ -183,6 +202,9 @@ p {
 			width: 100%;
 		}
 	}
+}
+.pictures {
+	background: $bg-grey;
 }
 
 .forgot {
