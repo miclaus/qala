@@ -23,6 +23,16 @@ exposed.route '/signup',
 	action : (params, queryParams) ->
 		BlazeLayout.render 'fullscreenLayout',
 			main : 'signup'
+			
+### Forgot View ###
+
+exposed.route '/forgot',
+
+	name   : 'forgot'
+
+	action : (params, queryParams) ->
+		BlazeLayout.render 'fullscreenLayout',
+			main : 'forgot'			
 
 
 ### Logged in routes ###

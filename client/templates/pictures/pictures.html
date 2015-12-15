@@ -1,3 +1,29 @@
 <template name="pictures">
-	Pictures
+	<div class="breadcrumb">
+		<a href="#" title=""><i class="fa fa-arrow-left"></i></a>
+		<span class="breadcrumb__text">Uploads</span> 
+		<i class="fa fa-user"></i>
+		<i class="fa fa-filter"></i>
+		<i class="fa fa-search"></i>
+	</div>
+	<div class="container login">
+		<div class="container__background">
+			<p>Log in or sign up to share your pics with other people!</p>
+			<form>
+				<div class="input-group">
+					
+					<input type="text" placeholder="Username" name="login_username">
+				</div>
+				<div class="input-group">
+					<i class="fa fa-lock"></i>
+					<input type="password" placeholder="Password" name="login_password">
+				</div>
+				<button type="submit" name="login" class="login">Login</button>
+			</form>	
+			<p><a href="/forgot" title="Forgot your login?">Trouble logging in?</a></p>
+			<hr>
+			<p><i class="fa fa-facebook-official"></i>Sign up with Facebook</p>
+			<p>Don't have an account? <a href="/signup" title="Sign up to Qala">Sign up now!</a></p>
+		</div>
+	</div>
 </template>
