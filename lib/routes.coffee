@@ -33,7 +33,7 @@ exposed.route '/signup',
 	action : (params, queryParams) ->
 		BlazeLayout.render 'fullscreenLayout',
 			main : 'signup'
-			
+
 ### Forgot View ###
 
 exposed.route '/forgot',
@@ -42,7 +42,19 @@ exposed.route '/forgot',
 
 	action : (params, queryParams) ->
 		BlazeLayout.render 'fullscreenLayout',
-			main : 'forgot'			
+			main : 'forgot'
+
+
+### Pictures View ###
+
+exposed.route '/',
+
+	name   : 'pictures'
+
+	action : (params, queryParams) ->
+		BlazeLayout.render 'mainLayout',
+			top  : 'header'
+			main : 'pictures'
 
 
 ### Logged in routes ###
@@ -52,25 +64,13 @@ loggedIn = FlowRouter.group
 	triggersEnter : [ (context, redirect) ->
 		unless Meteor.loggingIn() or Meteor.userId()
 			route = FlowRouter.current()
-			
+
 			unless route.route.name is 'login'
 				# save requested path to redirect back to after login
 				Session.set 'redirectAfterLogin', route.path
-			
+
 			FlowRouter.go 'login'
 	]
-
-
-### Pictures View ###
-
-loggedIn.route '/',
-
-	name   : 'pictures'
-
-	action : (params, queryParams) ->
-		BlazeLayout.render 'mainLayout',
-			top  : 'header'
-			main : 'pictures'
 
 
 ### Detail View ###

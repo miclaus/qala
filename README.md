@@ -1,5 +1,4 @@
 # Qala
-*based on Studipuls*
 Collaborate and lose it.
 
 ### Development
