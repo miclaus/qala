@@ -3,6 +3,16 @@
 exposed = FlowRouter.group {}
 
 
+### Default Route ###
+
+exposed.route '/',
+
+	name   : 'default'
+
+	action : (params, queryParams) ->
+		FlowRouter.go 'welcome'
+
+
 ### Welcome View ###
 
 exposed.route '/welcome',
@@ -12,6 +22,7 @@ exposed.route '/welcome',
 	action : (params, queryParams) ->
 		BlazeLayout.render 'fullscreenLayout',
 			main : 'welcome'
+
 
 ### Login View ###
 
@@ -47,7 +58,7 @@ exposed.route '/forgot',
 
 ### Pictures View ###
 
-exposed.route '/',
+exposed.route '/pictures',
 
 	name   : 'pictures'
 
