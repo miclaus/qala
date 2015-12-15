@@ -1,23 +1,23 @@
 <template name="forgot">
-	<div class="breadcrumb">
-		<a href="/login" title="Back to login screen"><i class="fa fa-arrow-left"></i></a>
-		<span class="breadcrumb__text">Recover Login Data</span>  
-	</div>
-	<div class="container forgot">
-		<div class="container__background">
+	<div class="forgot">
+		<div class="breadcrumb">
+			<a href="/login" title=""><i class="fa fa-arrow-left"></i></a>
+			<span class="breadcrumb__text">Forgot</span> 
+		</div>
+		<div class="container">
 			<p>Enter your username or email address. You will soon receive an email with your login data.</p>
 			<form>
 				<div class="input-group">
 					<i class="fa fa-user"></i>
-					<input type="text" placeholder="Username" name="forgot_username">
+					<input type="text" placeholder="Username" name="login_username">
 				</div>
-				<hr>
+				<span class="seperator">Or</span>
 				<div class="input-group">
 					<i class="fa fa-envelope-o"></i>
 					<input type="email" placeholder="E-Mail" name="forgot_email">
 				</div>
-				<button type="submit" name="forgot" class="forgot">Send</button>
-			</form>	
-		</div>
+				<button type="submit" name="login">Send</button>
+			</form>
+		</div>	
 	</div>
 </template>

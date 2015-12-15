@@ -44,175 +44,130 @@ $bg-grey: #E0E0E0;
 }
 
 html, body, #__blaze-root {
-	height: 100%;
+	min-height: 100vh;
  	font-size: 62.5%;
 }
 
-.breadcrumb
-{
+.breadcrumb {
 	background: $blue;
-	color: white;
-	border-radius: 0;
-	position: relative;
-
-  	@include rem2pix(1.8);
-
-	padding: 15px 15px;
-	margin-bottom: 0;
-
+	color: $white;
+	height: 52px;
+	@include rem2pix(1.8);
+	line-height: 52px;
+	padding: 0 15px;
+	a {
+		color: $white;
+		&:hover, &:active, &:focus {
+			
+		}
+	}
 	&__text {
 		margin-left: 20px;
 	}
-	a {
-		color: white;
-	}
-	
-	.fa {
-		@include rem2pix(2);
+	span .fa {
+		margin-left: 20px;
 	}
 	img {
-		width: 10%;
-		top: 12px;
-		left: 15px;
-		position: absolute;
-		&~span {
-			margin-left: 50px;
-		}
+		width: 40px;
+		vertical-align: middle;
 	}
 }
 
-p {
-	margin: 0;
-}
-
-.fa.pull-right {
-	margin-left: 1em;
+.container {
+	padding: 30px;
 }
 
 
 /*
 ===============================
-			WELCOME
+			
 ===============================
 */
 
 
 /*
 ===============================
-	FORGOTT LOGIN SIGNUP
+ FORGOTT LOGIN SIGNUP WELCOME
 ===============================
 */
 
-.container
-{
-	display: flex;
-	flex-flow: column;
-	height: 100%;
-
-	&__background
-	{
-		padding: 30px;
-		background: url(/images/bg.png) center center;
-		background-size: cover;
-		margin: 0;
-		flex-grow: 1;
-
+.login, .signup, .forgot, .welcome {
+	min-height: 100vh;
+	background: url(/images/bg.png) center center;
+	p {
 		@include rem2pix(1.8);
-
-		.input-group
-		{
-			position: relative;
-			margin-bottom: 30px;
+		color: $white;
+		margin: 0 0 20px 0;
+	}
+	.input-group {
+		position: relative;
+		@include rem2pix(1.6);
+		color: $white;
+		margin-bottom: 20px;
+		.fa {
+			position: absolute;
+			line-height: 45px;
+			padding-left: 15px;
+		}
+		input {
+			padding-left: 45px;
+			height: 45px;
+			line-height: 45px;
 			width: 100%;
-
-			input {
-				width: 100%;
-				padding-left: 50px;
-				background: transparent;
-				border: 1px solid white;
-				height: 50px;
-				color: white;
-			}
-			span {
-				position: absolute;
-				margin-left: 10px;
-				line-height: 37px;
-			}
-			.fa {
-				position: absolute;
-				color: $white;
-				padding: 16px;
-			}
-			.fa-lock {
-				padding-left: 19px;
-			}
-			.fa-user {
-				padding-top: 16px;
-			}
-		}
-		button.login, button.signup, button.forgot
-		{
-			width: 100%;
-			height: 50px;
-			border: 0;
-			background: #FF4081;
-			color: white;
-			margin-bottom: 10px;
-		}
-		p
-		{
-			text-align: center;
-			color: white;
-			margin-bottom: 30px;
-
-			@include rem2pix(1.4);
-
-			&:first-child {
-				text-align: left;
-
-				@include rem2pix(1.8);
-			}
-			i {
-				margin-right: 5px;
-			}
-			a {
-				color: white;
-				font-weight: bold;
-				text-decoration: none;
-
-				&:hover, &:active, &:focus {
-
-				}
-			}
-		}
-		hr {
-			color: white;
-			border-color: white;
-			background-color: white;
-			margin-bottom: 30px;
+			border-radius: 0;
+			background: transparent;
+			border: 1px solid $white;
 		}
 	}
-}
-.container.welcome {
-	.container__background{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		img {
-			width: 100%;
+	button {
+		width: 100%;
+		height: 45px;
+		background: $pink;
+		text-align: center;
+		color: $white;
+		border: 0;
+		@include rem2pix(1.6);
+		margin-bottom: 10px;
+	}
+	.troublelink, .signupfacebook, .signuplink {
+		text-align: center;
+		@include rem2pix(1.4);
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover, &:active, &:focus {
+			
 		}
 	}
-}
-.pictures {
-	background: $bg-grey;
-}
-
-.forgot {
 	hr {
 		margin-bottom: 20px;
 	}
+	img {
+		width: 50%;
+		transform: translate(50%,150%);
+	}
+	.seperator {
+		display: block;
+		text-align: center;
+		position: relative;
+		color: $white;
+		@include rem2pix(1.4);
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		&:before,&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-top: 1px solid $white;
+			width: 45%;
+			top: 50%;
+		 }
+		&:after {
+			right: 0;
+		}
+	}
 }
-
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    white;
@@ -227,4 +182,15 @@ p {
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    white;
+}
+
+/*
+===============================
+			PICTURES
+===============================
+*/
+
+.pictures {
+	min-height: 100vh;
+	background: $bg-grey;
 }

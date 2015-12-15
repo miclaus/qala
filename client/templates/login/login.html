@@ -1,10 +1,10 @@
 <template name="login">
-	<div class="breadcrumb">
-		<a href="#" title=""><i class="fa fa-arrow-left"></i></a>
-		<span class="breadcrumb__text">Login</span> 
-	</div>
-	<div class="container login">
-		<div class="container__background">
+	<div class="login">
+		<div class="breadcrumb">
+			<a href="/pictures" title=""><i class="fa fa-arrow-left"></i></a>
+			<span class="breadcrumb__text">Login</span> 
+		</div>	
+		<div class="container">
 			<p>Log in or sign up to share your pics with other people!</p>
 			<form>
 				<div class="input-group">
@@ -15,12 +15,12 @@
 					<i class="fa fa-lock"></i>
 					<input type="password" placeholder="Password" name="login_password">
 				</div>
-				<button type="submit" name="login" class="login">Login</button>
-			</form>	
-			<p><a href="/forgot" title="Forgot your login?">Trouble logging in?</a></p>
-			<hr>
-			<p><i class="fa fa-facebook-official"></i>Sign up with Facebook</p>
-			<p>Don't have an account? <a href="/signup" title="Sign up to Qala">Sign up now!</a></p>
+				<button type="submit" name="login">Login</button>
+			</form>
+			<a href="/forgot" title="Forgot your login?"><p class="troublelink">Trouble logging in?</p></a>
+			<span class="seperator">Or</span>
+			<p class="signupfacebook"><i class="fa fa-facebook-official"></i>Sign up with Facebook</p>
+			<p class="signuplink"><a href="/signup" title="Sign up to Qala">Don't have an account? Sign up now!</a></p>
 		</div>
 	</div>
 </template>
