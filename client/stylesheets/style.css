@@ -473,6 +473,13 @@ p {
       background-color: white;
       margin-bottom: 30px; }
 
+.container.welcome .container__background {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container.welcome .container__background img {
+    width: 100%; }
+
 .forgot hr {
   margin-bottom: 20px; }
 
