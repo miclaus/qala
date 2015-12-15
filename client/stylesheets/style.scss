@@ -1,0 +1,181 @@
+/*
+===============================
+			PARTIALS
+===============================
+*/
+
+@import 'normalize';
+
+
+/*
+===============================
+			COLORS
+===============================
+*/
+
+$blue: #1DBCD4;
+$lightgrey: #B3B3B3;
+$darkgrey: #555555;
+$white: white;
+$pink: #FF4081;
+
+/*
+===============================
+			MIXINS
+===============================
+*/
+
+@mixin rem2pix($size) {
+	font-size: $size*10px;
+	font-size: $size*1rem;
+}
+
+
+/*
+===============================
+			GENERAL
+===============================
+*/
+
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, #__blaze-root {
+	height: 100%;
+ 	font-size: 62.5%;
+}
+
+.breadcrumb {
+	background: $blue;
+	color: white;
+	border-radius: 0;
+  	@include rem2pix(1.8);
+	padding: 15px 15px;
+	margin-bottom: 0;
+	&__text {
+		margin-left: 20px;
+	}
+	a {
+		color: white;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+
+/*
+===============================
+			WELCOME
+===============================
+*/
+
+
+/*
+===============================
+	FORGOTT LOGIN SIGNUP
+===============================
+*/
+
+.container {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	&__background {
+		padding: 30px;
+		background: url(/images/bg.png) center center;
+		background-size: cover;
+		margin: 0;
+		flex-grow: 1;
+		@include rem2pix(1.8);
+		.input-group {
+			position: relative;
+			margin-bottom: 30px;
+			width: 100%;
+			input {
+				width: 100%;
+				padding-left: 50px;
+				background: transparent;
+				border: 1px solid white;
+				height: 50px;
+				color: white;
+			}
+			span {
+				position: absolute;
+				margin-left: 10px;
+				line-height: 37px;
+			}
+			.fa {
+				position: absolute;
+				color: $white;
+				padding: 16px;
+			}
+			.fa-lock {
+				padding-left: 19px;
+			}
+			.fa-user {
+				padding-top: 16px;
+			}
+		}
+		button.login, button.signup, button.forgot {
+			width: 100%;
+			height: 50px;
+			border: 0;
+			background: #FF4081;
+			color: white;
+			margin-bottom: 10px;
+		} 
+		p {
+			text-align: center;
+			color: white;
+			margin-bottom: 30px;
+			@include rem2pix(1.4);
+			&:first-child {
+				text-align: left;
+				@include rem2pix(1.8);
+			}
+			i {
+				margin-right: 5px;
+			}
+			a {
+				color: white;
+				font-weight: bold;
+				text-decoration: none;
+				&:hover, &:active, &:focus {
+					
+				}
+			}
+		}
+		hr {
+			color: white;
+			border-color: white;
+			background-color: white;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.forgot {
+	hr {
+		margin-bottom: 20px;
+	}
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    white;
+}

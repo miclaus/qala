@@ -1,3 +1,27 @@
 <template name="signup">
-	Sign Up
+	<div class="breadcrumb">
+		<a href="/login" title="Back to login screen"><i class="fa fa-arrow-left"></i></a> 
+		<span class="breadcrumb__text">Create Account</span>  
+	</div>
+	<div class="container signup">
+		<div class="container__background">
+			<p>Please enter username, email address and a password to create an account.</p>
+			<form>
+				<div class="input-group">
+					<i class="fa fa-user"></i>
+					<input type="text" placeholder="Username" name="signup_username">
+					
+				</div>
+				<div class="input-group">
+					<i class="fa fa-envelope-o"></i>
+					<input type="email" placeholder="E-Mail" name="signup_email">
+				</div>
+				<div class="input-group">
+					<i class="fa fa-lock"></i>
+					<input type="password" placeholder="Password" name="signup_password">
+				</div>
+			</form>
+			<button type="submit" name="signup" class="signup">Sign Up</button>
+		</div>
+	</div>
 </template>
