@@ -1,15 +1,21 @@
 <template name="profile">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-	<div class="pictures">
+	<div class="profile">
 		<div class="breadcrumb">
 			<img src="/images/logo_kopf.svg" alt="Qala Logo">
-			<span class="breadcrumb__text">Uploads</span> 	
+			<span class="breadcrumb__text">Profile</span> 	
 			<span class="pull-right">
 				<a href="#" title=""><i class="fa fa-search"></i></a>
 				<a href="#" title=""><i class="fa fa-filter"></i></a>
 				<a href="#" title="" class="logout"><i class="fa fa-sign-out"></i></a>
 			</span>
+		</div>
+		<div class="profile__meta" style="background: url('/images/1.png');">
+			<div class="profile__meta__img">
+				<img src="/images/1.png">
+				<p>Monica Jameson</p>
+			</div>
 		</div>
 		<div class="container js-masonry"
   data-masonry-options='{ "columnWidth": ".item", "itemSelector": ".item" }'>
@@ -45,7 +51,6 @@
 					</div>
 				</div>
 			</div>
-			<button class="new_picture">+</button>
 		</div>	
 	</div>
 </template>
