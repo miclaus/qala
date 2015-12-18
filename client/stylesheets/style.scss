@@ -384,8 +384,8 @@ html, body, #__blaze-root {
 		&__img {
 			transform: translate(0%,50%);
 			img {
-				width: 50px;
-				height: 50px;
+				width: 70px;
+				height: 70px;
 				border-radius: 50%;
 			}
 			p {
@@ -396,10 +396,39 @@ html, body, #__blaze-root {
 			}
 		}
 	}
+	&__subnav {
+		a {
+			width: 50%;
+			height: 40px;
+			@include rem2pix(1.4);
+			line-height: 40px;
+			text-align: center;
+			color: $blue;
+			display: inline-block;
+			text-transform: uppercase;
+			border-bottom: 1px solid $lightgrey;
+			text-decoration: none;
+			&.active {
+				border-bottom: 3px solid $blue;
+			}
+			&:hover, &:active, &:focus {
+				border-bottom: 3px solid $blue !important;
+			}
+			
+		}
+	}
+	.uploads, .likes {
+		display: none;
+	}
+	.active_tab {
+		display: block;
+	}
 	.container {
-		margin: 10px 5px 0;
+// 		margin: 10px 5px 0;
+		padding: 10px 5px;
 		position: relative;
 		@extend %clearfix;
+		background: $bg-grey;
 		p {
 			@include rem2pix(1.6);
 			color: $darkgrey;

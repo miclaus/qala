@@ -660,8 +660,8 @@ html, body, #__blaze-root {
   .profile__meta__img {
     transform: translate(0%, 50%); }
     .profile__meta__img img {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%; }
     .profile__meta__img p {
       width: 100%;
@@ -669,9 +669,30 @@ html, body, #__blaze-root {
       font-size: 19px;
       font-size: 1.9rem;
       color: white; }
+.profile__subnav a {
+  width: 50%;
+  height: 40px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 40px;
+  text-align: center;
+  color: #1DBCD4;
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 1px solid #B3B3B3;
+  text-decoration: none; }
+  .profile__subnav a.active {
+    border-bottom: 3px solid #1DBCD4; }
+  .profile__subnav a:hover, .profile__subnav a:active, .profile__subnav a:focus {
+    border-bottom: 3px solid #1DBCD4 !important; }
+.profile .uploads, .profile .likes {
+  display: none; }
+.profile .active_tab {
+  display: block; }
 .profile .container {
-  margin: 10px 5px 0;
-  position: relative; }
+  padding: 10px 5px;
+  position: relative;
+  background: #E0E0E0; }
   .profile .container p {
     font-size: 16px;
     font-size: 1.6rem;
