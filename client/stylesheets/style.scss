@@ -462,3 +462,116 @@ html, body, #__blaze-root {
 		}
 	}
 }
+
+/*
+===============================
+			Comments
+===============================
+*/
+.comments{
+	.container {
+		padding-bottom: 60px;
+		.load_more {
+			padding: 10px;
+			margin: 10px;
+			border-bottom: 1px solid $bg-grey;
+			p{
+				@include rem2pix(1.6);
+				margin: 0;
+				text-align: center;
+				color: $bg-grey;
+			}
+		}
+		.comment {
+			padding: 10px;
+			&:nth-child(2n+1){
+				background: #F9F9F9;
+			}
+			&__img {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 10px;
+				width: 20%;
+				img {
+					width: 70px;
+					height: 70px;
+					border-radius: 50%;
+				}
+			}
+			&__content {
+				display: inline-block;
+				width: 75%;
+				p {
+					margin-top: 0;
+				}
+				&__author {
+					@include rem2pix(1.8);
+					color: $darkgrey;
+				}
+				&__comment{
+					@include rem2pix(1.6);
+					color: $darkgrey;
+				} 
+				&__meta {
+					@include rem2pix(1.4);
+					color: $lightgrey;
+					a {
+						color: $lightgrey;
+					}
+				}
+				.fa {
+					@include rem2pix(1.4);
+					color: $darkgrey;
+					line-height: 16px;
+					span {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+	form {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		input {
+			height: 50px;
+			width: 100%;
+			background: #F9F9F9;
+			border: 0;
+			border-top: 1px solid $lightgrey;
+			display: inline-block;
+			@include rem2pix(1.6);
+			padding-left: 10px;
+			padding-right: 25%;
+			color: $lightgrey;
+		}
+		button {
+			height: 50px;
+			width: 20%;
+			background: $pink;
+			display: inline-block;
+			border: 0;
+			color: $white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include rem2pix(1.6);
+		}
+		::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		    color:    $lightgrey;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color:    $lightgrey;
+		   opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color:    $lightgrey;
+		   opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		   color:    $lightgrey;
+		}
+	}
+}
