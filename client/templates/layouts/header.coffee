@@ -35,3 +35,7 @@ Template.header.events
 
 	'click #header_back_button': ->
 		history.back()
+
+	'click #header_logout_button' : ->
+		Meteor.logout ->
+			FlowRouter.go 'login'

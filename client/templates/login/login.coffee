@@ -1,17 +1,24 @@
-if Meteor.isClient
-  Template.login.events 'submit form': (event, template) ->
+Template.login.events
+  'submit form': (event) ->
     event.preventDefault()
-    login_username = template.find('#login_username').value
-    login_password = template.find('#login_password').value
+    login_username = $('#login_username').val()
+    login_password = $('#login_password').val()
     Meteor.loginWithPassword login_username, login_password, (error) ->
       alert error if error
-      FlowRouter.go 'uploads' if Meteor.userId()
     return
 
-# # redirect user back to requested path after login
-# Accounts.onLogin ->
-# 	redirect = Session.get 'redirectAfterLogin'
-#
-# 	if redirect?
-# 		unless redirect is '/login'
-# 			FlowRouter.go redirect
+## redirect user back to requested path after login
+Accounts.onLogin ->
+  FlowRouter.go '/pictures'
+
+  ###
+  redirect = Session.get 'redirectAfterLogin'
+
+  if redirect?
+    if redirect is '/login'
+      FlowRouter.go '/pictures'
+    else
+      FlowRouter.go redirect
+  else
+    FlowRouter.go '/pictures'
+  ###
