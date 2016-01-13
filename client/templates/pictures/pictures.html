@@ -1,51 +1,54 @@
 <template name="pictures">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-	<div class="pictures">
-		<div class="breadcrumb">
-			<img src="/images/logo_kopf.svg" alt="Qala Logo">
-			<span class="breadcrumb__text">Uploads</span> 	
-			<span class="pull-right">
-				<a href="#" title=""><i class="fa fa-search"></i></a>
-				<a href="#" title=""><i class="fa fa-filter"></i></a>
-				<a href="/login.html" title=""><i class="fa fa-user"></i></a>
-			</span>
+	<div id="pictures"
+		class="mainLayout">
+
+		<div id="pictures_search" class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<i id="pictures_search_icon" class="mdi-action-search"></i>
+				</span>
+
+				<input
+					type="text"
+					id="pictures_search_input"
+					class="form-control floating-label"
+					placeholder="Search for uploads by username">
+			</div>
 		</div>
-		<div class="container js-masonry"
-  data-masonry-options='{ "columnWidth": ".item", "itemSelector": ".item" }'>
-			<div class="item ">
+
+		<!--<div class="grid js-masonry"
+  data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+			<div class="grid-item">
+
+					<a href="#"><img src="/images/1.png"></a>
+
+			</div>
+			<div class="grid-item">
+
+					<a href="#"><img src="/images/1.png"></a>
+
+			</div>
+			<div class="grid-item">
 				<div class="item__inner">
 					<a href="#"><img src="/images/1.png"></a>
 					<div class="item__inner__meta">
 						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
 					</div>
 				</div>
-			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/2.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart"><span>54</span></i><i class="fa fa-comment pull-right"><span>20</span></i>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/3.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/4.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
-				</div>
-			</div>
-			<button class="new_picture">+</button>
-		</div>	
+			</div>-->
+			
+			<!--
+			{{#masonryContainer columnWidth=115 transitionDuration="0.1s" gutter=2 id="MasonryContainer" }}
+     {{#each exampleContentCollection}}
+       {{#masonryElement "MasonryContainer"}}
+
+				<a href="#"><img src="/images/1.png"></a>
+
+       {{/masonryElement}}
+     {{/each}}
+  {{/masonryContainer}}
+
+			<button class="new_picture">+</button>-->
+
 	</div>
 </template>
