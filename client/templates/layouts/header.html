@@ -1,3 +1,41 @@
 <template name="header">
-	
+	<div id="header"
+		class="display-table">
+
+		<div class="display-table-cell">
+			<a href="/" title="Home">
+				<img id="header_logo"
+					src="images/logo_icon.svg"
+					alt="qala">
+			</a>
+
+			<h1 id="header_title">Uploads</h1>
+
+			<div id="header_nav">
+				{{#if isPictureView}}
+				<i id="header_search_button"
+					class="header-buttons fa fa-search">
+				</i>
+
+				<i id="header_filter_button"
+					class="header-buttons fa fa-filter">
+				</i>
+				{{/if}}
+
+				{{#if isLoggedIn}}
+				<a href="/logout" title="Logout">
+					<i id="header_logout_button"
+						class="header-buttons fa fa-sign-out">
+					</i>
+				</a>
+				{{else}}
+				<a href="/login" title="Login">
+					<i id="header_login_button"
+						class="header-buttons fa fa-user">
+					</i>
+				</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
 </template>
