@@ -1,7 +1,11 @@
 <template name="login">
-	<div class="login">
+	<div id="login"
+		class="fullscreenLayout">
+
 		<div class="container">
-			<p>Log in or sign up to share your pics with other people!</p>
+
+			<p>Log in or sign up to share your pics!</p>
+
 			<form>
 				<div class="input-group">
 					<i class="fa fa-user"></i>
@@ -13,10 +17,18 @@
 				</div>
 				<button type="submit" name="login">Login</button>
 			</form>
-			<a href="/forgot" title="Forgot your login?"><p class="troublelink">Trouble logging in?</p></a>
-			<span class="seperator">Or</span>
-			<p class="signupfacebook"><i class="fa fa-facebook-official"></i>Sign up with Facebook</p>
-			<p class="signuplink"><a href="/signup" title="Sign up to Qala">Don't have an account? Sign up now!</a></p>
+
+			<a href="/forgot" title="Forgot your login?">
+				<p class="troublelink">Trouble logging in?</p>
+			</a>
+			<span class="seperator">
+				<img id="login_logo" src="images/logo_icon.svg">
+			</span>
+
+			<p class="signuplink">
+				<a href="/signup" title="Sign up to Qala">Don't have an account? Sign up now!</a>
+			</p>
+
 		</div>
 	</div>
 </template>

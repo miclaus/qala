@@ -30,6 +30,26 @@
 	background-image: linear-gradient(#1DBCD4, #1DBCD4);
 }
 
+#pictures_search ::-webkit-input-placeholder {
+   color: #333 !important;
+   font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#pictures_search :-moz-placeholder { /* Firefox 18- */
+   color: #333 !important;
+   font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#pictures_search ::-moz-placeholder {  /* Firefox 19+ */
+   color: #333 !important;
+   font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#pictures_search :-ms-input-placeholder {
+   color: #333 !important;
+   font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
+}
+
 #pictures_search_no_results
 {
 	color: #333;

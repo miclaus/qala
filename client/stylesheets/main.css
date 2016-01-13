@@ -115,22 +115,22 @@ textarea
 }
 
 ::-webkit-input-placeholder {
-   color: #333 !important;
+   color: #fff !important;
    font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #333 !important;
+   color: #fff !important;
    font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #333 !important;
+   color: #fff !important;
    font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
 }
 
 :-ms-input-placeholder {
-   color: #333 !important;
+   color: #fff !important;
    font-family: 'dosisregular', 'Helvetica Neue', Arial, sans-serif;
 }
 
