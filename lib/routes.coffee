@@ -115,6 +115,11 @@ loggedIn.route '/:pictureId',
 
 	name   : 'detail'
 
+	triggersEnter : [ (context, params, queryParams) ->
+		
+			Meteor.call 'incrementPictureViews', context.params.pictureId
+	]
+
 	action : (params, queryParams) ->
 		picture = Pictures.findOne { _id : params.pictureId }
 

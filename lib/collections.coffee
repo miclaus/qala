@@ -1,5 +1,5 @@
 # Pictures
-# id, createdAt, userId, username, likes[] (FK userIds), colors[]
+# id, createdAt, userId, username, likes[] (FK userIds), colors[], views
 
 @Pictures = new Mongo.Collection('pictures')
 
