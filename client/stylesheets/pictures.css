@@ -30,6 +30,14 @@
 	background-image: linear-gradient(#1DBCD4, #1DBCD4);
 }
 
+#pictures_search_no_results
+{
+	color: #333;
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 115px;
+}
+
 /* ========
 	GRID
    ======== */
@@ -53,6 +61,11 @@
     margin: 0;
 }
 
+.grid-item-picture
+{
+	cursor: pointer;
+}
+
 .grid-item-info
 {
 	height: 35px;
@@ -64,11 +77,13 @@
 .grid-item-likes
 {
 	float: left;
+	cursor: pointer;
 }
 
 .grid-item-comments
 {
 	float: right;
+	cursor: pointer;
 }
 
 /* ========

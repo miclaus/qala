@@ -18,33 +18,39 @@
 			</div>
 		</div>
 
-		{{#masonryContainer id="pictures_grid" itemSelector=".masonry_element" columnWidth=".masonry_element" }}
-	 		{{#each pictures}}
-		 		{{#masonryElement "pictures_grid"}}
+		{{#if pictures}}
+			{{#masonryContainer id="pictures_grid" itemSelector=".masonry_element" columnWidth=".masonry_element" }}
+		 		{{#each pictures}}
+			 		{{#masonryElement "pictures_grid"}}
 
-				<div class="grid-item">
-					<img class="grid-item-picture" src={{ url }}>
-					<div class="grid-item-info">
-						<i class="grid-item-likes fa fa-heart-o">
-							{{#if likes}}
-							<span>{{ likes.length}}</span>
-							{{ else }}
-							<span>0</span>
-							{{/if}}
-						</i>
-						<i class="grid-item-comments fa fa-comment-o">
-							{{#if comments}}
-							<span>{{ comments }}</span>
-							{{ else }}
-							<span>0</span>
-							{{/if}}
-						</i>
+					<div class="grid-item">
+						<img class="grid-item-picture" src={{ url }}>
+						<div class="grid-item-info">
+							<i class="grid-item-likes fa fa-heart-o">
+								{{#if likes}}
+								<span>{{ likes.length}}</span>
+								{{ else }}
+								<span>0</span>
+								{{/if}}
+							</i>
+							<i class="grid-item-comments fa fa-comment-o">
+								{{#if comments}}
+								<span>{{ comments }}</span>
+								{{ else }}
+								<span>0</span>
+								{{/if}}
+							</i>
+						</div>
 					</div>
-				</div>
 
-		 		{{/masonryElement}}
-	 		{{/each}}
-		{{/masonryContainer}}
+			 		{{/masonryElement}}
+		 		{{/each}}
+			{{/masonryContainer}}
+		{{ else }}
+			<div id="pictures_search_no_results">
+				<p>No uploads found.</p>
+			</div>
+		{{/if}}
 
 		<button id="pictures_upload">
 				<div id="pictures_upload_icon">+</div>

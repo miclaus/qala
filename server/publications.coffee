@@ -12,15 +12,20 @@ if Pictures.find().fetch().length is 0
       'awetret'
       'fjghj'
     ]
+    username: 'iosif'
   Pictures.insert
     url: 'images/2.png'
+    username: 'iosif'
   Pictures.insert
     _id: '56789'
     url: 'images/3.png'
+    username: 'vali'
   Pictures.insert
     url: 'images/4.png'
+    username: 'vali'
   Pictures.insert
     url: 'images/5.png'
+    username: 'vali'
 
 Meteor.publish 'pictures', ->
   Pictures.find {}
