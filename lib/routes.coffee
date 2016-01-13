@@ -32,7 +32,8 @@ exposed.route '/login',
 
 	action : (params, queryParams) ->
 		unless Meteor.loggingIn() or Meteor.userId()
-			BlazeLayout.render 'fullscreenLayout',
+			BlazeLayout.render 'mainLayout',
+				top  : 'header'
 				main : 'login'
 		else
 			FlowRouter.go 'default'
@@ -42,12 +43,13 @@ exposed.route '/login',
 
 exposed.route '/signup',
 
-	name   : 'signup'
+	name   : 'sign up'
 
 	action : (params, queryParams) ->
 		unless Meteor.loggingIn() or Meteor.userId()
-			BlazeLayout.render 'fullscreenLayout',
-				main : 'signup'
+				BlazeLayout.render 'mainLayout',
+					top  : 'header'
+					main : 'signup'
 		else
 			FlowRouter.go 'default'
 
@@ -59,8 +61,9 @@ exposed.route '/verify',
 	name   : 'verify'
 
 	action : (params, queryParams) ->
-		BlazeLayout.render 'fullscreenLayout',
-			main : 'verify'
+			BlazeLayout.render 'mainLayout',
+				top  : 'header'
+				main : 'verify'
 
 
 ### Forgot View ###
@@ -70,15 +73,16 @@ exposed.route '/forgot',
 	name   : 'forgot'
 
 	action : (params, queryParams) ->
-		BlazeLayout.render 'fullscreenLayout',
-			main : 'forgot'
+			BlazeLayout.render 'mainLayout',
+				top  : 'header'
+				main : 'forgot'
 
 
 ### Pictures View ###
 
 exposed.route '/pictures',
 
-	name   : 'pictures'
+	name   : 'uploads'
 
 	action : (params, queryParams) ->
 		BlazeLayout.render 'mainLayout',

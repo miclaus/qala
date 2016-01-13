@@ -108,18 +108,3 @@
 {
 	margin-top: -8px;
 }
-
-/*
-===============================
-			PICTURES (old)
-===============================
-*/
-/*
-.pictures .container, .detail__img, .detail__img-meta, .detail__img-colors, .detail .container, .profile .container {
-  *zoom: 1; }
-  .pictures .container::before, .detail__img::before, .detail__img-meta::before, .detail__img-colors::before, .detail .container::before, .profile .container::before, .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
-    content: " ";
-    display: table; }
-  .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
-    clear: both; }
-*/

@@ -3,13 +3,17 @@
 		class="display-table">
 
 		<div class="display-table-cell">
+			{{#if isPictureView}}
 			<a href="/" title="Home">
 				<img id="header_logo"
 					src="images/logo_icon.svg"
 					alt="qala">
 			</a>
+			{{ else }}
+			<i id="header_back_button" class="fa fa-arrow-left"></i>
+			{{/if}}
 
-			<h1 id="header_title">Uploads</h1>
+			<h1 id="header_title">{{ title }}</h1>
 
 			<div id="header_nav">
 				{{#if isPictureView}}
@@ -29,11 +33,13 @@
 					</i>
 				</a>
 				{{else}}
-				<a href="/login" title="Login">
-					<i id="header_login_button"
-						class="header-buttons fa fa-user">
-					</i>
-				</a>
+					{{#unless isAccountsView}}
+					<a href="/login" title="Login">
+						<i id="header_login_button"
+							class="header-buttons fa fa-user">
+						</i>
+					</a>
+					{{/unless}}
 				{{/if}}
 			</div>
 		</div>

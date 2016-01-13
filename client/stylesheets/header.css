@@ -17,10 +17,21 @@
   margin-right: 15px;
 }
 
+#header_back_button
+{
+  font-size: 1.3em;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 15px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
 #header_title
 {
   float: left;
   margin-top: 4px;
+  text-transform: capitalize;
 }
 
 #header_nav
