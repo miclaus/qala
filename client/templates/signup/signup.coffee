@@ -15,14 +15,13 @@
 # }
 
 if Meteor.isClient
-  Template.signup.events 'submit form': (event, template) ->
-    event.preventDefault()
-    signup_username = template.find('#signup_username').value
-    signup_email = template.find('#signup_email').value
-    signup_password = template.find('#signup_password').value
-    Accounts.createUser
-      username: signup_username
-      email: signup_email
-      password: signup_password
-    return
-
+    Template.signup.events 'submit form': (event, template) ->
+        event.preventDefault()
+        signup_username = template.find('#signup_username').value
+        signup_email = template.find('#signup_email').value
+        signup_password = template.find('#signup_password').value
+        Accounts.createUser
+            username: signup_username
+            email: signup_email
+            password: signup_password
+        return
