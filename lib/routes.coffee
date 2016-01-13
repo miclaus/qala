@@ -45,6 +45,7 @@ exposed.route '/signup',
 		BlazeLayout.render 'fullscreenLayout',
 			main : 'signup'
 
+
 ### Forgot View ###
 
 exposed.route '/forgot',
