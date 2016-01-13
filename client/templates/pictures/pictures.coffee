@@ -1,39 +1,22 @@
+searchPictures = ->
+  pictures = Pictures.find({}).fetch()
+
+  # calculate comments count
+  _.each pictures, (picture) ->
+    picture.comments = Comments.find({ pictureId : picture._id }).fetch().length
+
+  pictures
+
 Template.pictures.onCreated ->
   self = this
   self.autorun ->
     self.subscribe 'pictures'
+    self.subscribe 'comments'
 
 Template.pictures.helpers
 	pictures : ->
-		Pictures.find {} or {}
+		searchPictures()
 
-
-
-# var grid = document.querySelector('.container');
-#
-# var msnry = new Masonry( grid, {
-# 	itemSelector: '.item',
-# 	columnWidth: '.item',
-# 	percentPosition: true,
-#     isAnimated: true,
-#     isFitWidth: true
-# });
-#
-# imagesLoaded( grid, function() {
-# 	msnry.layout();
-# });
-
-###grid = document.querySelector('.container')
-msnry = new Masonry(grid,
-  itemSelector: '.item'
-  columnWidth: '.item'
-  percentPosition: true
-  isAnimated: true
-  isFitWidth: true)
-imagesLoaded grid, ->
-  msnry.layout()
-  return
-###
 ###
 searchPicturesByUsername = ->
 	searchQuery = $.trim( Session.get 'searchQuery' )

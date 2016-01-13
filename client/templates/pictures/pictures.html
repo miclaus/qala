@@ -24,9 +24,22 @@
 
 				<div class="grid-item">
 					<img class="grid-item-picture" src={{ url }}>
-					<!--<h2 class="post-title">{{ title }}</h2>
-					<p class="post-info">by {{ partnerName }} | {{ formatTime submitted }} | {{ categoryName }}</p>
-					<p class="post-content">{{ content }}</p>-->
+					<div class="grid-item-info">
+						<i class="grid-item-likes fa fa-heart-o">
+							{{#if likes}}
+							<span>{{ likes.length}}</span>
+							{{ else }}
+							<span>0</span>
+							{{/if}}
+						</i>
+						<i class="grid-item-comments fa fa-comment-o">
+							{{#if comments}}
+							<span>{{ comments }}</span>
+							{{ else }}
+							<span>0</span>
+							{{/if}}
+						</i>
+					</div>
 				</div>
 
 		 		{{/masonryElement}}
@@ -38,28 +51,6 @@
 		</button>
 
 		{{/if}}
-
-		<!-- old code -->
-		<!--<div class="grid js-masonry"
-  data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-			<div class="grid-item">
-
-					<a href="#"><img src="/images/1.png"></a>
-
-			</div>
-			<div class="grid-item">
-
-					<a href="#"><img src="/images/1.png"></a>
-
-			</div>
-			<div class="grid-item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/1.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
-				</div>
-			</div>-->
 
 	</div>
 </template>
