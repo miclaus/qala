@@ -71,3 +71,5 @@ Template.pictures.events
 	'click #pictures_upload' : ->
 		unless Meteor.loggingIn() or Meteor.userId()
 			FlowRouter.go 'login'
+		else
+			alert 'uploading soon...'
