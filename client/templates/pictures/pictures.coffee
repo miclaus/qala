@@ -38,7 +38,10 @@ Template.pictures.helpers
 Template.pictures.events
 	'click .grid-item-picture,
 	 click .grid-item-comments' : ->
-		FlowRouter.go('/' + @_id)
+		if Meteor.loggingIn() or Meteor.userId()
+			FlowRouter.go('/' + @_id)
+		else
+			FlowRouter.go '/login'
 
 	'focus #pictures_search_input' : (event) ->
 		$(event.target).keypress()
@@ -47,3 +50,24 @@ Template.pictures.events
 		searchQuery = $( event.target ).val()
 		Session.set 'searchQuery', searchQuery
 		searchPictures()
+
+	'click .grid-item-likes' : (event) ->
+		if Meteor.loggingIn() or Meteor.userId()
+			pictureId = @_id
+			userId = Meteor.userId()
+			picture = Pictures.findOne({ _id : pictureId })
+			likes = picture.likes
+			alreadyLiked = _.contains(likes, userId);
+			unless alreadyLiked
+				Pictures.update {
+					_id : pictureId
+				},
+				{
+					$push : { likes : userId }
+				}
+		else
+			FlowRouter.go 'login'
+
+	'click #pictures_upload' : ->
+		unless Meteor.loggingIn() or Meteor.userId()
+			FlowRouter.go 'login'

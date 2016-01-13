@@ -31,7 +31,10 @@ Meteor.publish 'pictures', ->
   Pictures.find {}
 
 Pictures.allow
+  # TODO only if loggedIn
   insert : ->
+    true
+  update : ->
     true
 
 # Comments
