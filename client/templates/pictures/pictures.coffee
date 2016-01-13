@@ -65,6 +65,7 @@ Template.pictures.events
 				{
 					$push : { likes : userId }
 				}
+				$( event.target ).addClass('liked')
 		else
 			FlowRouter.go 'login'
 
