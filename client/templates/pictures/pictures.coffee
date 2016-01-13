@@ -72,4 +72,4 @@ Template.pictures.events
 		unless Meteor.loggingIn() or Meteor.userId()
 			FlowRouter.go 'login'
 		else
-			alert 'uploading soon...'
+			$('#picture_input').click()
