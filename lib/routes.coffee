@@ -153,16 +153,15 @@ loggedIn.route '/:pictureId/comments',
 
 ### Logout ###
 
+###
 loggedIn.route '/logout',
 
 	name   : 'logout'
 
 	action : (params, queryParams) ->
 		Meteor.logout ->
-			console.log FlowRouter.path('login')
-			# FlowRouter.go FlowRouter.path('login')
 			FlowRouter.go 'login'
-
+###
 
 ### Not found route ###
 
