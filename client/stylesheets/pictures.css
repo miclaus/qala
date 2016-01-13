@@ -1,11 +1,17 @@
+/* ========
+	SEARCH
+   ======== */
+
 #pictures_search
 {
+	display: none;
 	position: fixed;
 	top : 50px;
 	width: 100%;
 	height: 50px;
-  margin-top: 5px;
-  margin-left: 5%;
+	padding-top: 5px;
+	padding-left: 2.5%;
+  background: #fff;
 	z-index : 1;
 }
 
@@ -20,8 +26,54 @@
 	color: #333;
 	font-size: 1.2em;
 	margin-top: 5px;
-	margin-bottom : 0;
+	margin-bottom: 0;
 	background-image: linear-gradient(#1DBCD4, #1DBCD4);
+}
+
+/* ========
+	GRID
+   ======== */
+
+#pictures_grid
+{
+	width: 100%;
+}
+
+.masonry_element
+{
+	width: 50%;
+	padding: 5px;
+}
+
+.grid-item,
+.grid-item-picture
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ========
+	UPLOAD
+   ======== */
+
+#pictures_upload
+{
+	position: fixed;
+	bottom: 2.5%;
+	right: 2.5%;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background: #FF4081;
+	font-size: 2.7em;
+	text-align: center;
+	border: 0;
+}
+
+#pictures_upload_icon
+{
+	margin-top: -8px;
 }
 
 /*
@@ -38,7 +90,7 @@
   .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
     clear: both; }
 
-		
+
 .pictures {
   min-height: 100vh;
   background: #E0E0E0; }

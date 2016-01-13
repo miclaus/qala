@@ -1,4 +1,4 @@
-Template.header.helpers {
+Template.header.helpers
 	isPictureView : ->
 		if FlowRouter.current().path is '/pictures'
 			true
@@ -8,4 +8,7 @@ Template.header.helpers {
 			true
 		else
 			false
-}
+
+Template.header.events
+	'click #header_search_button' : ->
+		$('#pictures_search').toggle()

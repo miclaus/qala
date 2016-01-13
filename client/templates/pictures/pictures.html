@@ -2,6 +2,8 @@
 	<div id="pictures"
 		class="mainLayout">
 
+		{{#if Template.subscriptionsReady}}
+
 		<div id="pictures_search" class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon">
@@ -16,6 +18,28 @@
 			</div>
 		</div>
 
+		{{#masonryContainer id="pictures_grid" itemSelector=".masonry_element" columnWidth=".masonry_element" }}
+	 		{{#each pictures}}
+		 		{{#masonryElement "pictures_grid"}}
+
+				<div class="grid-item">
+					<img class="grid-item-picture" src={{ url }}>
+					<!--<h2 class="post-title">{{ title }}</h2>
+					<p class="post-info">by {{ partnerName }} | {{ formatTime submitted }} | {{ categoryName }}</p>
+					<p class="post-content">{{ content }}</p>-->
+				</div>
+
+		 		{{/masonryElement}}
+	 		{{/each}}
+		{{/masonryContainer}}
+
+		<button id="pictures_upload">
+				<div id="pictures_upload_icon">+</div>
+		</button>
+
+		{{/if}}
+
+		<!-- old code -->
 		<!--<div class="grid js-masonry"
   data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
 			<div class="grid-item">
@@ -36,19 +60,6 @@
 					</div>
 				</div>
 			</div>-->
-			
-			<!--
-			{{#masonryContainer columnWidth=115 transitionDuration="0.1s" gutter=2 id="MasonryContainer" }}
-     {{#each exampleContentCollection}}
-       {{#masonryElement "MasonryContainer"}}
-
-				<a href="#"><img src="/images/1.png"></a>
-
-       {{/masonryElement}}
-     {{/each}}
-  {{/masonryContainer}}
-
-			<button class="new_picture">+</button>-->
 
 	</div>
 </template>

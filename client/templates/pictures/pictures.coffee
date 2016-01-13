@@ -1,3 +1,14 @@
+Template.pictures.onCreated ->
+  self = this
+  self.autorun ->
+    self.subscribe 'pictures'
+
+Template.pictures.helpers
+	pictures : ->
+		Pictures.find {} or {}
+
+
+
 # var grid = document.querySelector('.container');
 #
 # var msnry = new Masonry( grid, {
@@ -23,7 +34,7 @@ imagesLoaded grid, ->
   msnry.layout()
   return
 ###
-
+###
 searchPicturesByUsername = ->
 	searchQuery = $.trim( Session.get 'searchQuery' )
 	searchQuery = searchQuery.replace('/', '') # prevent invalid regex pattern injection
@@ -55,12 +66,12 @@ Template.pictures.helpers {
 		searchPicturesByUsername()
 }
 
-
 Template.pictures.events
-	'focus #pictures_search_input': (event) ->
+	'focus #pictures_search_input' : (event) ->
 		$(event.target).keypress()
 
-	'keyup #pictures_search_input': ->
+	'keyup #pictures_search_input' : ->
 		searchQuery = $( event.target ).val()
 		Session.set 'searchQuery', searchQuery
 		searchPicturesByUsername()
+###
