@@ -31,8 +31,11 @@ exposed.route '/login',
 	name   : 'login'
 
 	action : (params, queryParams) ->
-		BlazeLayout.render 'fullscreenLayout',
-			main : 'login'
+		unless Meteor.loggingIn() or Meteor.userId()
+			BlazeLayout.render 'fullscreenLayout',
+				main : 'login'
+		else
+			FlowRouter.go 'default'
 
 
 ### Signup View ###
@@ -42,8 +45,22 @@ exposed.route '/signup',
 	name   : 'signup'
 
 	action : (params, queryParams) ->
+		unless Meteor.loggingIn() or Meteor.userId()
+			BlazeLayout.render 'fullscreenLayout',
+				main : 'signup'
+		else
+			FlowRouter.go 'default'
+
+
+### Verify View ###
+
+exposed.route '/verify',
+
+	name   : 'verify'
+
+	action : (params, queryParams) ->
 		BlazeLayout.render 'fullscreenLayout',
-			main : 'signup'
+			main : 'verify'
 
 
 ### Forgot View ###
@@ -73,7 +90,7 @@ exposed.route '/pictures',
 
 loggedIn = FlowRouter.group
 	# redirect to login view if not logged in
-	triggersEnter : [ (context, redirect) ->
+	triggersEnter : [ (context, redirect, stop) ->
 		unless Meteor.loggingIn() or Meteor.userId()
 			route = FlowRouter.current()
 
@@ -82,6 +99,9 @@ loggedIn = FlowRouter.group
 				Session.set 'redirectAfterLogin', route.path
 
 			FlowRouter.go 'login'
+		# else
+		# 	# NOTE - tried this to fix /logout route, but not working
+		# 	stop()
 	]
 
 
@@ -135,7 +155,9 @@ loggedIn.route '/logout',
 
 	action : (params, queryParams) ->
 		Meteor.logout ->
-			FlowRouter.go FlowRouter.path('login')
+			console.log FlowRouter.path('login')
+			# FlowRouter.go FlowRouter.path('login')
+			FlowRouter.go 'login'
 
 
 ### Not found route ###
