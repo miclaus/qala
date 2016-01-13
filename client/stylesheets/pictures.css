@@ -1,0 +1,93 @@
+#pictures_search
+{
+	position: fixed;
+	top : 50px;
+	width: 100%;
+	height: 50px;
+  margin-top: 5px;
+  margin-left: 5%;
+	z-index : 1;
+}
+
+#pictures_search_icon {
+	font-size: 1.6em;
+	color: #1DBCD4;
+}
+
+#pictures_search_input
+{
+	width: 85%;
+	color: #333;
+	font-size: 1.2em;
+	margin-top: 5px;
+	margin-bottom : 0;
+	background-image: linear-gradient(#1DBCD4, #1DBCD4);
+}
+
+/*
+===============================
+			PICTURES (old)
+===============================
+*/
+/*
+.pictures .container, .detail__img, .detail__img-meta, .detail__img-colors, .detail .container, .profile .container {
+  *zoom: 1; }
+  .pictures .container::before, .detail__img::before, .detail__img-meta::before, .detail__img-colors::before, .detail .container::before, .profile .container::before, .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
+    content: " ";
+    display: table; }
+  .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
+    clear: both; }
+
+		
+.pictures {
+  min-height: 100vh;
+  background: #E0E0E0; }
+  .pictures .container {
+    margin: 10px 5px 0;
+    position: relative; }
+    .pictures .container .item {
+      width: 50%;
+      float: left;
+      /*
+      			margin-bottom: 10px;
+      			&:nth-child(2n+1){
+      				padding-right: 5px;
+      			}
+      			&:nth-child(2n+2){
+      				padding-left: 5px;
+      			}
+      */
+			/*
+      padding: 0 5px 10px; }
+      .pictures .container .item__inner img {
+        width: 100%;
+        max-width: 100%;
+        display: block; }
+      .pictures .container .item__inner__meta {
+        background: white;
+        padding: 10px;
+        height: 38px;
+        color: #B3B3B3;
+        font-size: 18px;
+        font-size: 1.8rem; }
+        .pictures .container .item__inner__meta .fa-comment, .pictures .container .item__inner__meta .fa-heart {
+          color: #1DBCD4; }
+        .pictures .container .item__inner__meta span {
+          font-size: 14px;
+          font-size: 1.4rem;
+          margin-left: 5px;
+          color: #B3B3B3; }
+    .pictures .container button.new_picture {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      height: 70px;
+      width: 70px;
+      text-align: center;
+      border-radius: 50%;
+      background: #FF4081;
+      color: white;
+      font-size: 18px;
+      font-size: 1.8rem;
+      border: 0; }
+*/

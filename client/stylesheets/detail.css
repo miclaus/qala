@@ -1,0 +1,82 @@
+/*
+===============================
+			DETAIL (old)
+===============================
+*/
+.detail__profile-meta {
+  padding: 10px;
+  height: 70px; }
+  .detail__profile-meta img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px; }
+  .detail__profile-meta span {
+    display: block;
+    line-height: 25px;
+    color: #B3B3B3;
+    font-size: 15px;
+    font-size: 1.5rem; }
+    .detail__profile-meta span:nth-child(2) {
+      font-size: 12px;
+      font-size: 1.2rem; }
+    .detail__profile-meta span .fa {
+      margin-right: 5px; }
+  .detail__profile-meta .author-name {
+    color: #1DBCD4;
+    display: inline; }
+.detail__img {
+  height: 400px;
+  overflow: hidden;
+  text-align: center; }
+.detail__img-meta {
+  background: white;
+  height: 38px;
+  color: #B3B3B3;
+  font-size: 18px;
+  font-size: 1.8rem; }
+  .detail__img-meta .fa-comment, .detail__img-meta .fa-heart {
+    color: #1DBCD4; }
+  .detail__img-meta span {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-left: 5px;
+    color: #B3B3B3; }
+  .detail__img-meta i {
+    width: 25%;
+    text-align: center;
+    line-height: 38px; }
+.detail__img-colors span {
+  height: 23px;
+  width: 25%;
+  display: inline-block; }
+.detail .container {
+  margin: 10px 5px 0;
+  position: relative; }
+  .detail .container p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #555555;
+    margin-left: 5px; }
+  .detail .container .item {
+    width: 50%;
+    float: left;
+    padding: 0 5px 10px; }
+    .detail .container .item__inner img {
+      width: 100%;
+      max-width: 100%; }
+    .detail .container .item__inner__meta {
+      background: white;
+      padding: 10px;
+      height: 38px;
+      color: #B3B3B3;
+      font-size: 18px;
+      font-size: 1.8rem; }
+      .detail .container .item__inner__meta .fa-comment, .detail .container .item__inner__meta .fa-heart {
+        color: #1DBCD4; }
+      .detail .container .item__inner__meta span {
+        font-size: 14px;
+        font-size: 1.4rem;
+        margin-left: 5px;
+        color: #B3B3B3; }
