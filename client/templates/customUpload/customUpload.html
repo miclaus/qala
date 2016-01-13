@@ -1,0 +1,10 @@
+<template name="customUpload">
+	<form method="POST" enctype="multipart/form-data">
+		<input
+			id="picture_input"
+			type="file"
+			class="jqUploadclass"
+			data-form-data='{{ submitData }}'
+			accept="image/*">
+	</form>
+</template>

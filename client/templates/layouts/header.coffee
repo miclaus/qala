@@ -1,8 +1,8 @@
 Template.header.onRendered ->
 	Tracker.autorun ->
 		FlowRouter.watchPathChange()
-		Session.set('currentPath',FlowRouter.current().path)
-		Session.set('currentRouteName',FlowRouter.current().route.name)
+		Session.set('currentPath', FlowRouter.current().path)
+		Session.set('currentRouteName', FlowRouter.current().route.name)
 
 Template.header.helpers
 	isPictureView : ->

@@ -20,8 +20,8 @@
 
 		{{#if pictures}}
 			{{#masonryContainer id="pictures_grid" itemSelector=".masonry_element" columnWidth=".masonry_element" }}
-		 		{{#each pictures}}
-			 		{{#masonryElement "pictures_grid"}}
+				{{#each pictures}}
+					{{#masonryElement "pictures_grid"}}
 
 					<div class="grid-item">
 						<img class="grid-item-picture" src={{ url }}>
@@ -43,8 +43,8 @@
 						</div>
 					</div>
 
-			 		{{/masonryElement}}
-		 		{{/each}}
+					{{/masonryElement}}
+				{{/each}}
 			{{/masonryContainer}}
 		{{ else }}
 			<div id="pictures_search_no_results">
@@ -53,8 +53,10 @@
 		{{/if}}
 
 		<button id="pictures_upload">
-				<div id="pictures_upload_icon">+</div>
+			<div id="pictures_upload_icon">+</div>
 		</button>
+
+		{{> customUpload }}
 
 		{{/if}}
 

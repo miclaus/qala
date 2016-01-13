@@ -72,3 +72,5 @@ Template.pictures.events
 	'click #pictures_upload' : ->
 		unless Meteor.loggingIn() or Meteor.userId()
 			FlowRouter.go 'login'
+		else
+			$('#picture_input').click()

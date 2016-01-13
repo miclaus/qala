@@ -3,8 +3,9 @@ Template.login.events
     event.preventDefault()
     login_username = $('#login_username').val()
     login_password = $('#login_password').val()
-    Meteor.loginWithPassword login_username, login_password
-    return false
+    Meteor.loginWithPassword login_username, login_password, (error) ->
+      alert error if error
+    return
 
 ## redirect user back to requested path after login
 Accounts.onLogin ->
