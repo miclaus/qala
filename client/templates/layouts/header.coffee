@@ -32,6 +32,7 @@ Template.header.helpers
 Template.header.events
 	'click #header_search_button' : ->
 		$('#pictures_search').toggle()
+		$('#pictures_search_input').focus();
 
 	'click #header_back_button': ->
 		history.back()
