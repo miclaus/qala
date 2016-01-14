@@ -11,7 +11,7 @@
 					</span>
 					<span>
 						<i class="fa fa-clock-o"></i>
-						{{ date }}
+						{{ createdAt }}
 					</span>
 				</div>
 			</div>
@@ -45,13 +45,13 @@
 			</div>
 
 			<div class="detail__img-colors">
-				<span style="background: #3067AE"></span>
-				<span style="background: #67CFE1"></span>
-				<span style="background: #E2EED7"></span>
+				<span style="background: rgb({{colors.[0]}})"></span>
+				<span style="background: rgb({{colors.[1]}})"></span>
+				<span style="background: rgb({{colors.[2]}})"></span>
 			</div>
 
 		</div>
-		
+
 		{{> chat}}
 
 		{{/with }}
