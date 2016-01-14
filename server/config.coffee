@@ -7,8 +7,9 @@ Meteor.startup ->
     tmpDir: process.env.PWD + '/.uploads/tmp'
     uploadDir: process.env.PWD + '/.uploads/'
     checkCreateDirectories: true
-    finished: (fileInfo, formFields) ->
-      console.log 'upload finished, perform a disk operation'
+    # finished: (fileInfo, formFields) ->
+    #   console.log 'upload finished, perform a disk operation'
+    #   console.log Meteor.userId();
     mimeTypes:
       'jpeg': 'image/jpeg'
       'jpg': 'image/jpeg'

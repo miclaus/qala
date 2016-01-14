@@ -82,6 +82,12 @@ Template.pictures.events
 			FlowRouter.go 'login'
 		else
 			if $('#pictures_upload').hasClass 'ready-to-upload'
+				userId = Meteor.userId()
+				userData = Meteor.users.findOne(userId)
+
+				Session.set('uploaderUserId', userId);
+				Session.set('uploaderUsername', userData.username)
+
 				$('#pictures_upload').removeClass 'ready-to-upload'
 				if $('.start')[0]
 					$('.start')[0].click()

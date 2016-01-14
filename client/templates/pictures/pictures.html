@@ -24,20 +24,20 @@
 					{{#masonryElement "pictures_grid"}}
 
 					<div class="grid-item">
-						<img class="grid-item-picture" src={{ url }}>
+						<img class="grid-item-picture" src="{{ url }}">
 						<div class="grid-item-info">
 							<i class="grid-item-likes fa fa-heart-o">
 								{{#if likes}}
-								<span>{{ likes.length}}</span>
+									<span>{{ likes.length}}</span>
 								{{ else }}
-								<span>0</span>
+									<span>0</span>
 								{{/if}}
 							</i>
 							<i class="grid-item-comments fa fa-comment-o">
 								{{#if comments}}
-								<span>{{ comments }}</span>
+									<span>{{ comments }}</span>
 								{{ else }}
-								<span>0</span>
+									<span>0</span>
 								{{/if}}
 							</i>
 						</div>
