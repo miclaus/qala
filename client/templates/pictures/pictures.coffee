@@ -88,6 +88,7 @@ Template.pictures.events
 					Session.set('uploaderUserId', userId);
 					Session.set('uploaderUsername', userData.username)
 					$('#pictures_upload').removeClass 'ready-to-upload'
+					$('#pictures_upload_label').text 'Choose'
 					if $('.start')[0]
 						$('.start')[0].click()
 					if $('.done')[0]
@@ -95,6 +96,7 @@ Template.pictures.events
 			else
 				$('#picture_uploader input[type="file"]').click()
 				$('#pictures_upload').addClass 'ready-to-upload'
+				$('#pictures_upload_label').text 'Upload'
 				# if prompt 'Are you a robot?', '20 + 6 = ?' is 26
 				# 	$('#pictures_upload').click()
 				# else
