@@ -1,10 +1,10 @@
 # Pictures
-# id, createdAt, userId, username, likes[] (FK userIds), colors[]
+# id, createdAt, userId, username, likes[] (FK userIds), colors[], views
 
 @Pictures = new Mongo.Collection('pictures')
 
 # Comments
-# id, createdAt, pictureId, userId, username
+# id, createdAt, message, pictureId, userId, username
 
 @Comments = new Mongo.Collection('comments')
 

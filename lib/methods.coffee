@@ -9,3 +9,22 @@ Meteor.methods
 	'Accounts.methods.sendVerificationEmail' : (userId) ->
 		# TODO - validation
 		Accounts.sendVerificationEmail userId
+
+	'Accounts.methods.sendResetPasswordEmail' : (userId) ->
+		Accounts.sendResetPasswordEmail userId
+
+	incrementPictureViews : (pictureId) ->
+		Pictures.update {
+			_id : pictureId
+		},
+		{
+			$inc : { views : 1 }
+		}
+
+	addComment : (message, pictureId) ->
+		check [ message, pictureId ], [ String ]
+
+		Comments.insert
+			createdAt : moment().format('LLL')
+			message   : message
+			pictureId : pictureId
