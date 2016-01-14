@@ -7,10 +7,10 @@ Meteor.startup ->
     url = fileInfo.url
     sourceImage = document.createElement('img')
     sourceImage.src = url
-    colorThief = new ColorThief.colorRob()
-    console.log sourceImage
-    colors = colorThief.getPalette(sourceImage, 3)
-    console.log colors
+    colors = []
+    sourceImage.onload = ->
+      colorThief = new ColorThief.colorRob()
+      colors = colorThief.getPalette(sourceImage, 2) # 2=3
 
     Pictures.insert
       createdAt: moment().format('LLL')
@@ -18,7 +18,7 @@ Meteor.startup ->
       userId: Session.get('uploaderUserId')
       username: Session.get('uploaderUsername')
       likes: []
-      colors: []
+      colors: colors
       views: 0
     Session.set 'uploaderUserId', null
     Session.set 'uploaderUsername', null
