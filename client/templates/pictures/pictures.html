@@ -56,7 +56,18 @@
 			<div id="pictures_upload_icon">+</div>
 		</button>
 
-		{{> customUpload }}
+		<div id="picture_uploader">
+			{{> upload_bootstrap fileTypes='.jpg,.jpeg,.png,.bmp' multiple=false }}
+			<!-- {{> customUpload}} -->
+			<!-- <form method="POST" enctype="multipart/form-data">
+				<input
+					id="picture_input"
+					style="visibility:visible"
+					type="file"
+					data-form-data='{{ submitData }}'
+					accept="image/*">
+			</form> -->
+		</div>
 
 		{{/if}}
 

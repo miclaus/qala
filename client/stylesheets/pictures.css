@@ -123,8 +123,27 @@
 	text-align: center;
 	border: 0;
 }
+#pictures_upload.ready-to-upload
+{
+	background : #40FF51
+}
 
 #pictures_upload_icon
 {
 	margin-top: -8px;
+}
+
+#picture_uploader
+{
+	position : fixed;
+	bottom : 0;
+	background: #FF4081;
+	font-size: 2.7em;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#picture_uploader
+{
+	visibility: hidden
 }

@@ -23,10 +23,14 @@ resetSearchQuery = ->
 	$('#pictures_search_input').val ''
 
 Template.pictures.onCreated ->
+	Uploader.init this
 	self = this
 	self.autorun ->
 		self.subscribe 'pictures'
 		self.subscribe 'comments'
+
+# Template.pictures.onRendered ->
+# 	Uploader.render.call this
 
 Template.pictures.onDestroyed ->
 	resetSearchQuery()
@@ -34,6 +38,9 @@ Template.pictures.onDestroyed ->
 Template.pictures.helpers
 	pictures : ->
 		searchPictures()
+	uploaderCallbacks : ->
+		finished: (index, fileInfo, context) ->
+			console.log fileInfo
 
 Template.pictures.events
 	'click .grid-item-picture,
@@ -68,8 +75,40 @@ Template.pictures.events
 		else
 			FlowRouter.go 'login'
 
-	'click #pictures_upload' : ->
+
+	'click #pictures_upload' : (event) ->
 		unless Meteor.loggingIn() or Meteor.userId()
 			FlowRouter.go 'login'
 		else
-			$('#picture_input').click()
+			if $('#pictures_upload').hasClass 'ready-to-upload'
+				$('#pictures_upload').removeClass 'ready-to-upload'
+				if $('.start')[0]
+					$('.start')[0].click()
+				if $('.done')[0]
+					$('.done')[0].click()
+			else
+				$('#picture_uploader input[type="file"]').click()
+				$('#pictures_upload').addClass 'ready-to-upload'
+				# if prompt 'Are you a robot?', '20 + 6 = ?' is 26
+				# 	$('#pictures_upload').click()
+				# else
+				# 	alert 'Sorry'
+
+	# 'click #pictures_upload' : ->
+	# 	unless Meteor.loggingIn() or Meteor.userId()
+	# 		FlowRouter.go 'login'
+	# 	else
+	# 		labelTextBefore = $('#picture_uploader .progress-label')[0].innerText
+	# 		$('#picture_uploader input[type="file"]')[0].click()
+	# 		pictureUploaderInterval = Meteor.setInterval ->
+	# 			console.log 'halow'
+	# 			labelTextAfter = $('#picture_uploader .progress-label')[0].innerText
+	# 			console.log labelTextAfter
+	# 			if labelTextBefore is not labelTextAfter
+	# 				console.log labelTextAfter
+	# 			else
+	# 				Meteor.clearInterval(pictureUploaderInterval)
+	# 		, 1000
+
+
+return
