@@ -1,9 +1,6 @@
 Meteor.startup ->
 
   Uploader.finished = (index, fileInfo, templateContext) ->
-    console.log fileInfo
-    # pictureId = Session.get 'pictureId'
-    # url = Pictures.findOne( _id : pictureId ).url
     url = fileInfo.url
     sourceImage = document.createElement('img')
     sourceImage.src = url
@@ -11,7 +8,6 @@ Meteor.startup ->
     sourceImage.onload = ->
       colorThief = new ColorThief.colorRob()
       colors = colorThief.getPalette(sourceImage, 2) # 2=3
-
     Pictures.insert
       createdAt: moment().format('LLL')
       url: url

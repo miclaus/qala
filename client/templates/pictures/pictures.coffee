@@ -84,15 +84,14 @@ Template.pictures.events
 			if $('#pictures_upload').hasClass 'ready-to-upload'
 				userId = Meteor.userId()
 				userData = Meteor.users.findOne(userId)
-
-				Session.set('uploaderUserId', userId);
-				Session.set('uploaderUsername', userData.username)
-
-				$('#pictures_upload').removeClass 'ready-to-upload'
-				if $('.start')[0]
-					$('.start')[0].click()
-				if $('.done')[0]
-					$('.done')[0].click()
+				if userId and userData
+					Session.set('uploaderUserId', userId);
+					Session.set('uploaderUsername', userData.username)
+					$('#pictures_upload').removeClass 'ready-to-upload'
+					if $('.start')[0]
+						$('.start')[0].click()
+					if $('.done')[0]
+						$('.done')[0].click()
 			else
 				$('#picture_uploader input[type="file"]').click()
 				$('#pictures_upload').addClass 'ready-to-upload'
