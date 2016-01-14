@@ -40,17 +40,27 @@ Pictures.allow
 # Comments
 
 # dev only
+###
 Comments.remove({})
 
 if Comments.find().fetch().length is 0
   Comments.insert
     pictureId: '12345'
+    message: 'hola'
+    username: 'vali'
   Comments.insert
     pictureId: '56789'
+    message: 'certo'
+    username: 'vali'
   Comments.insert
     pictureId: '56789'
+    message: 'farfalle'
+    username: 'iosif'
   Comments.insert
     pictureId: '56789'
+    message: 'haha'
+    username: 'iosif'
+###
 
 Meteor.publish 'comments', ->
   Comments.find {}

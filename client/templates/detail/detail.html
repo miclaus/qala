@@ -1,61 +1,59 @@
 <template name="detail">
-	<div class="detail">
-		<div class="breadcrumb">
-			<a href="/pictures" title=""><i class="fa fa-arrow-left"></i></a>
-			<span class="breadcrumb__text"></span> 	
-			<span class="pull-right">
-				<a href="#" title=""><i class="fa fa-search"></i></a>
-				<a href="#" title=""><i class="fa fa-filter"></i></a>
-				<a href="/login.html" title=""><i class="fa fa-user"></i></a>
-			</span>
-		</div>
-		<div class="detail__profile-meta">
-			<img src="/images/1.png"><div><span>by <span class="author-name">Monica Jameson</span></span><span><i class="fa fa-clock-o"></i>Jul 9, 2014</span></div>
-		</div>
-		<div class="detail__img">
-			<img src="/images/1.png">
-		</div>
-		<div class="detail__img-meta">
-			<i class="fa fa-heart"><span>54</span></i><i class="fa fa-eye"><span>8.345</span></i><i class="fa fa-comment"><span>20</span></i><i class="fa fa-share"></i>
-		</div>
-		<div class="detail__img-colors">
-			<span style="background: #3067AE"></span><span style="background: #67CFE1"></span><span style="background: #E2EED7"></span><span style="background: #F4F7FC"></span>
-		</div>
-		<div class="container js-masonry"
-data-masonry-options='{ "columnWidth": ".item", "itemSelector": ".item" }'>
-  			<p>Similar Pictures</p>
-			<div class="item ">
-				<div class="item__inner">
-					<a href="#"><img src="/images/1.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
+	{{#if Template.subscriptionsReady }}
+		{{#with picture }}
+		<div class="detail mainLayout">
+
+			<div class="detail__profile-meta">
+				<!--<img src="/images/1.png">-->
+				<div>
+					<span>by
+						<span class="author-name">{{ username }}</span>
+					</span>
+					<span>
+						<i class="fa fa-clock-o"></i>
+						{{ date }}
+					</span>
 				</div>
 			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/2.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart"><span>54</span></i><i class="fa fa-comment pull-right"><span>20</span></i>
-					</div>
-				</div>
+
+			<div class="detail__img">
+				<img src={{ url }}>
 			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/3.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
-				</div>
+
+			<div class="detail__img-meta">
+				<i class="detail-likes fa fa-heart">
+					{{#if likes}}
+					<span>{{ likes.length}}</span>
+					{{ else }}
+					<span>0</span>
+					{{/if}}
+				</i>
+				<i class="detail-views fa fa-eye">
+					{{#if views}}
+					<span>{{ views }}</span>
+					{{ else }}
+					<span>0</span>
+					{{/if}}
+				</i>
+				<i class="detail-comments fa fa-comment">
+					{{#if comments}}
+					<span>{{ comments }}</span>
+					{{ else }}
+					<span>0</span>
+					{{/if}}
+				</i>
 			</div>
-			<div class="item">
-				<div class="item__inner">
-					<a href="#"><img src="/images/4.png"></a>
-					<div class="item__inner__meta">
-						<i class="fa fa-heart-o"><span>54</span></i><i class="fa fa-comment-o pull-right"><span>20</span></i>
-					</div>
-				</div>
+
+			<div class="detail__img-colors">
+				<span style="background: #3067AE"></span>
+				<span style="background: #67CFE1"></span>
+				<span style="background: #E2EED7"></span>
 			</div>
+
 		</div>
-	</div>
+		
+		{{> chat}}
+
+		{{/with }}
+	{{/if}}
 </template>

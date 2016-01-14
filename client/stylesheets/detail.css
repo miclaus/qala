@@ -10,8 +10,9 @@
     display: table; }
   .pictures .container::after, .detail__img::after, .detail__img-meta::after, .detail__img-colors::after, .detail .container::after, .profile .container::after {
     clear: both; }
-    
+
 .detail__profile-meta {
+  margin-left: 2%;
   padding: 10px;
   height: 70px; }
   .detail__profile-meta img {
@@ -35,9 +36,15 @@
     color: #1DBCD4;
     display: inline; }
 .detail__img {
-  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+  /*height: 400px;*/
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
+.detail__img img {
+  width: 80%;
+}
 .detail__img-meta {
   background: white;
   height: 38px;
@@ -52,12 +59,17 @@
     margin-left: 5px;
     color: #B3B3B3; }
   .detail__img-meta i {
-    width: 25%;
+    width: 32%;
     text-align: center;
     line-height: 38px; }
+  .detail-likes,
+  .detail-comments
+  {
+    cursor: pointer;
+  }
 .detail__img-colors span {
   height: 23px;
-  width: 25%;
+  width: 32%;
   display: inline-block; }
 .detail .container {
   margin: 10px 5px 0;
